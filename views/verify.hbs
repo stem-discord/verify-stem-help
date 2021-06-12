@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discord Bouncer Bot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display:400,400i');
+
+        body, html {
+            font-family: 'Open Sans', sans-serif;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+        }
+
+        #text {
+            transform: translateY(-50%);
+            text-align: center;
+            position: relative;
+            padding: 5px;
+            top: 50%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: normal;
+            font-size: 300%;
+        }
+
+        #captcha {
+            display: inline-block;
+        }
+
+        #message.success {
+            color: #157c0d;
+        }
+
+        #message.error {
+            color: #7d0d0a;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        <h1><i>{{userTag}}</i></h1>
+        <p>Please verify your account by completing the captcha below.</p>
+        <div id="captcha">{{{captcha}}}</div>
+        <div id="message"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        const message = $('#message');
+
+        function callback(token) {
+            const data = {'g-recaptcha-response': token};
+            console.log(data);
+            $.post('/verify/{{banId}}', data, function () {
+                message.addClass('success');
+                message.removeClass('error');
+                message.html('Verification successful! You have been unbanned.');
+            })
+                    .fail(function (res, _, statusMessage) {
+                        message.addClass('error');
+                        message.removeClass('success');
+                        let errorMessage = statusMessage;
+                        if (res.responseJSON) errorMessage = res.responseJSON.error;
+                        message.html('Error: <strong>' + errorMessage + '</strong>');
+                    });
+        }
+    </script>
+</body>
+</html>
