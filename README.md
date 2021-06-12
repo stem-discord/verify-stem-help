@@ -12,7 +12,7 @@ the bot using `npm start`.
 ```markdown
 Help
 ----
-Commands used to show this message:
+Commands used to show this message: 
 
 # !ss
 # !ss help
