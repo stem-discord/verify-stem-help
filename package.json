@@ -1,5 +1,5 @@
 {
-  "name": "discord-bouncer-bot",
+  "name": "verify-stem-help",
   "version": "1.0.0",
   "description": "Bot that automatically kicks suspicious accounts (mostly spambots). Lets false positives verify themselves via DMs.",
   "main": "index.js",
@@ -17,15 +17,14 @@
     "bouncer"
   ],
   "author": {
-    "name": "Timur Kuzhagaliyev",
-    "email": "tim.kuzh@gmail.com",
-    "url": "https://foxypanda.me/"
+    "name": "STEM discord team",
+    "url": "https://stem.help"
   },
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/TimboKZ/discord-bouncer-bot/issues"
+    "url": "https://github.com/stem-discord/verify-stem-help/issues"
   },
-  "homepage": "https://github.com/TimboKZ/discord-bouncer-bot#readme",
+  "homepage": "https://github.com/stem-discord/verify-stem-help#readme",
   "dependencies": {
     "bluebird": "^3.5.5",
     "body-parser": "^1.19.0",

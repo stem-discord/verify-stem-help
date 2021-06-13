@@ -2,6 +2,9 @@
 .idea/
 *.swp
 
+# Config file
+/config.js
+
 # Logs
 logs
 *.log
