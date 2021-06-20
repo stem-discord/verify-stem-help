@@ -80,7 +80,7 @@
     "clean": "node scripts/clean.js",
     "start": "npm run build && node scripts/start.js",
     "start:debug": "npm run build && node scripts/start-debug.js",
-    "lint": "eslint {src,scripts}/**/*.{js,ts}",
+    "lint": "eslint -v && eslint {src,scripts}/**/*.{js,ts}",
     "lint:fix": "npm run lint -- --fix"
   },
   "title": "Coming Soon",
