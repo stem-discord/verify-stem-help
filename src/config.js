@@ -9,6 +9,9 @@ module.exports = {
 
   // injected into pug pages
   // variables will cascade when loaded
+  // EVERY VARIABLE WILL BE LOADED IN THE OPTIONS SCOPE AS WELL.
+  // BE CAREFUL NOT TO OVERRIDE SPECIFIC VARIABLES USED BY THE PUG ENGINE
+  // https://pugjs.org/api/reference.html
   'views': {
     '.': {
       git: {
