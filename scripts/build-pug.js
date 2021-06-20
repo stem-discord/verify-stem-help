@@ -20,7 +20,7 @@ function _processFile(filePath) {
     console.log('HERE', filePath);
     const variables = config[filePath.replace(/src\/pug\//, '')];
     renderPug(path.join(__dirname, srcRoot, filePath), {
-      destPath: config?.dist ? path.join(config?.dist, filePath.replace(/^pug\//, '')) : undefined,
+      destPath: config?.dist ? path.join(config?.dist, filePath.replace(/^pug\//, '')).replace(/\.pug$/, '.html') : undefined,
       variables,
     });
   }
