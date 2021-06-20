@@ -14,5 +14,8 @@ module.exports = {
       oauth: 'https://google.com',
       work: 'spongebob',
     },
+    '404': {
+      o: 'placeholder',
+    },
   },
 };
