@@ -17,8 +17,9 @@ function _processFile(filePath) {
         !filePath.match(/mixin/) &&
         !filePath.match(/\/pug\/layouts\//)
   ) {
-    console.log('HERE', filePath);
-    const variables = config[filePath.replace(/src\/pug\//, '')];
+    const id = filePath.replace(/pug\//, '').replace(/\.pug$/, '');
+    const variables = config.views[id];
+    if (variables) console.log(`loading variables '${id}'`);
     renderPug(path.join(__dirname, srcRoot, filePath), {
       destPath: config?.dist ? path.join(config?.dist, filePath.replace(/^pug\//, '')).replace(/\.pug$/, '.html') : undefined,
       variables,
