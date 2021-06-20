@@ -4,10 +4,10 @@
 const path = require('path');
 
 module.exports = {
-  // please use directory/name when doing this.
   'dist': path.join(__dirname, '../dist'),
 
   // injected into pug pages
+  // variables will cascade when loaded
   'views': {
     'index': {
       title: 'STEM Helpers & Students',
