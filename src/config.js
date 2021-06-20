@@ -1,3 +1,4 @@
+const {execSync} = require('child_process');
 
 // the configuration file
 // the settings here will get passed to the render function
@@ -10,6 +11,16 @@ module.exports = {
   // variables will cascade when loaded
   'views': {
     '.': {
+      git: {
+        commitHash: (() => {
+          try {
+            return execSync(`git log --format=%H -n 1`);
+          } catch (e) {
+            console.log(e);
+            return 'ERROR';
+          }
+        })(),
+      },
       discordUrl: 'https://discord.gg/stem',
       title: 'STEM Helpers & Students',
       meta: {
