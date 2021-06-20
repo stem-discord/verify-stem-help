@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content=meta.description)
+        meta(name='author', content=meta.title)
+
+        title Get Support - #{title}
+
+        include /resources
+    body
+        // Masthead
+        .masthead
+            .masthead-content.text-white
+                .container-fluid.px-4.px-lg-0
+                    h1.fst-italic.lh-1.mb-4 Having issues?
+                    p.mb-5
+                        | We use this verification system to prevent bots from joining
+                        br
+                        | If you are unable to verify yourself, please join the support server
+                    
+                    a.btn.btn-primary(href=supportDiscordUrl)
+                        | Get Support
+        include /bs
