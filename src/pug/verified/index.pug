@@ -5,25 +5,26 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content=meta.description)
+        meta(name='author', content=meta.title)
 
-        title 404 Not Found - #{title}
+        title #{title}
 
         include /resources
     body
+
         // Background Video
         video.bg-video(playsinline='playsinline', autoplay='autoplay', muted='muted', loop='loop')
-            source(src='/assets/mp4/bruh.mp4', type='video/mp4')
+            source(src='/assets/mp4/happy.mp4', type='video/mp4')
 
         // Masthead
         .masthead
             .masthead-content.text-white
                 .container-fluid.px-4.px-lg-0
-                    h1.fst-italic.lh-1.mb-4.font-weight-bold 404
+                    h1.fst-italic.lh-1.mb-4 Good Job!
                     p.mb-5
-                        | Tbh, there is like a 90% chance that you are seeing this because we messed something else. Welp, there's nothing that I can do about that.
+                        | You are now verified! Click the link below to join the server
                     
-                    a.btn.btn-primary(href="/")
-                        | 🧁 Proceed back to main page
+                    a.btn.btn-primary(href=discordUrl)
+                        | Go to #{title}
         include /bs
