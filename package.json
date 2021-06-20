@@ -79,7 +79,9 @@
     "build:scss": "node scripts/build-scss.js",
     "clean": "node scripts/clean.js",
     "start": "npm run build && node scripts/start.js",
-    "start:debug": "npm run build && node scripts/start-debug.js"
+    "start:debug": "npm run build && node scripts/start-debug.js",
+    "lint": "eslint {src,scripts}/**/*.{js,ts}",
+    "lint:fix": "npm run lint -- --fix"
   },
   "title": "Coming Soon",
   "version": "6.0.2"
