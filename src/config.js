@@ -9,7 +9,7 @@ module.exports = {
   // injected into pug pages
   // variables will cascade when loaded
   'views': {
-    'index': {
+    '.': {
       title: 'STEM Helpers & Students',
       oauth: 'https://google.com',
       work: 'spongebob',
