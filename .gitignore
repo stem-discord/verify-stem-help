@@ -119,3 +119,6 @@ dist
 
 # ignore vscode settings
 .vscode
+
+# ignore files starting with -
+-*
