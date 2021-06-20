@@ -10,7 +10,12 @@ module.exports = {
   // variables will cascade when loaded
   'views': {
     '.': {
+      discordUrl: 'https://discord.gg/stem',
       title: 'STEM Helpers & Students',
+      meta: {
+        title: 'this is title',
+        description: 'this is description',
+      },
       oauth: 'https://google.com',
       work: 'spongebob',
     },
