@@ -25,6 +25,7 @@ module.exports = {
         })(),
       },
       discordUrl: 'https://discord.gg/stem',
+      supportDiscordUrl: 'https://discord.gg/nWhQbGuB',
       title: 'STEM Helpers & Students',
       meta: {
         title: 'this is title',
