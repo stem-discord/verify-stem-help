@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content=meta.description)
+        meta(name='author', content=meta.title)
+
+        title Sorry 🙁 - #{title}
+
+        include /resources
+    body
+        // Masthead
+        .masthead
+            .masthead-content.text-white
+                .container-fluid.px-4.px-lg-0
+                    h1.fst-italic.lh-1.mb-4 Something went wrong
+                    p.mb-5
+                        | You must have to pass the verification system to join the server
+                    a.btn.btn-primary(href="/")
+                        | Proceed to main page (retry verification)
+                    a.btn.btn-secondary(href=supportDiscordUrl)
+                        | Get Support
+        include /bs
