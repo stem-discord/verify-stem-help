@@ -5,10 +5,10 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='It\'s a good idea trust me')
+        meta(name='author', content='Join nope\'s hell')
 
-        title Coming Soon - Start Bootstrap Theme
+        title #{title}
 
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
@@ -22,7 +22,7 @@ html(lang='en')
 
 
         // Core theme CSS (includes Bootstrap)
-        link(href='css/styles.css', rel='stylesheet')
+        link(href='/css/styles.css', rel='stylesheet')
 
     body
 
@@ -34,10 +34,14 @@ html(lang='en')
         .masthead
             .masthead-content.text-white
                 .container-fluid.px-4.px-lg-0
-                    h1.fst-italic.lh-1.mb-4 Our Website is Coming Soon
+                    h1.fst-italic.lh-1.mb-4 Thanks for looking at this fancy website
                     p.mb-5
-                        | We're ---> #{doctype} #{work} <--- hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!
+                        | You just have to verify yourself by clicking the giant button. Then we will give you a new invite link!
                     
+                    b.btn.btn-primary(type=button)
+                        | Click to verify youself
+
+
                     // * * * * * * * * * * * * * * *
                     // * * SB Forms Contact Form * *
                     // * * * * * * * * * * * * * * *
@@ -90,12 +94,12 @@ html(lang='en')
         // For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands
         .social-icons
             .d-flex.flex-row.flex-lg-column.justify-content-center.align-items-center.h-100.mt-3.mt-lg-0
-                a.btn.btn-dark.m-3(href='#!')
-                    i.fab.fa-twitter
-                a.btn.btn-dark.m-3(href='#!')
-                    i.fab.fa-facebook-f
-                a.btn.btn-dark.m-3(href='#!')
-                    i.fab.fa-instagram
+                a.btn.btn-dark.m-3(href='https://patreon.com/stemserver')
+                    i.fab.fa-patreon
+                a.btn.btn-dark.m-3(href='https://www.paypal.com/donate?hosted_button_id=C5UMNVT69K6SE')
+                    i.fab.fa-paypal
+                a.btn.btn-dark.m-3(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+                    i.fab.fa-youtube
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js')

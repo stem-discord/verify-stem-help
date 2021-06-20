@@ -10,6 +10,8 @@ module.exports = {
   // injected into pug pages
   'views': {
     'index': {
+      title: 'STEM Helpers & Students',
+      oauth: 'https://google.com',
       work: 'spongebob',
     },
   },
