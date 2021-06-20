@@ -6,6 +6,7 @@ const renderPug = require('./render-pug');
 
 const srcRoot = '../src';
 const config = require(path.join(srcRoot, 'config.js'));
+const pugOptions = require(path.join(srcRoot, 'pugOptions.js'));
 
 // overload variables in config so that variables will cascade
 function getVariables(id) {
@@ -40,6 +41,7 @@ function _processFile(filePath) {
     renderPug(path.join(__dirname, srcRoot, filePath), {
       destPath: config?.dist ? path.join(config?.dist, filePath.replace(/^pug\//, '')).replace(/\.pug$/, '.html') : undefined,
       variables,
+      ...pugOptions,
     });
   }
 }
