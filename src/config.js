@@ -27,7 +27,7 @@ module.exports = {
         title: 'this is title',
         description: 'this is description',
       },
-      oauth: 'https://google.com',
+      oauth: '/flow/redirect',
       work: 'spongebob',
     },
     '404': {
