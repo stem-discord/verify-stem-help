@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
-  basedir: `${__dirname}/pug/includes`,
+  basedir: path.join(__dirname, 'pug', 'includes'),
 };
